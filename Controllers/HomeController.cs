@@ -15,14 +15,14 @@ namespace km956216_MIS4200_.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "MIS and Analytics";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "MIS and Analytics major";
 
             return View();
         }
