@@ -14,6 +14,10 @@ namespace km956216_MIS4200_.Models
         public string email { get; set; }
         public string phone { get; set; }
         public DateTime customerSince { get; set; }
+
+        public string fullName {
+            get { return lastName + ", " + firstName; } 
+        }
         // add any other fields as appropriate
         // a customer can have any number of orders, a 1:M relationship,
         // We represent this in the model with an ICollection
