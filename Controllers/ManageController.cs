@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using km956216_MIS4200_.Models;
+using km956216_MIS4200.Models;
 
-namespace km956216_MIS4200_.Controllers
+namespace km956216_MIS4200.Controllers
 {
     [Authorize]
     public class ManageController : Controller

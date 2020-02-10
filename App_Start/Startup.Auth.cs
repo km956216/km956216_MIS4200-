@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using km956216_MIS4200_.Models;
+using km956216_MIS4200.Models;
 
-namespace km956216_MIS4200_
+namespace km956216_MIS4200
 {
     public partial class Startup
     {

@@ -1,0 +1,42 @@
+﻿@model km956216_MIS4200.Models.Vets
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vets</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vetFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vetLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vetLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.patients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.patients)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vetsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

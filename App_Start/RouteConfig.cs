@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace km956216_MIS4200_
+namespace km956216_MIS4200
 {
     public class RouteConfig
     {

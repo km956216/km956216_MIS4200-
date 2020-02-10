@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace km956216_MIS4200_.Models
+namespace km956216_MIS4200.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace km956216_MIS4200_.Controllers
+namespace km956216_MIS4200.Controllers
 {
     public class HomeController : Controller
     {

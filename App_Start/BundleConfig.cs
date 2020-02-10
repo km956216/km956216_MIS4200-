@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace km956216_MIS4200_
+namespace km956216_MIS4200
 {
     public class BundleConfig
     {

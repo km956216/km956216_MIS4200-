@@ -6,10 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using km956216_MIS4200_.DAL;
-using km956216_MIS4200_.Models;
+using km956216_MIS4200.DAL;
+using km956216_MIS4200.Models;
 
-namespace km956216_MIS4200_.Controllers
+namespace km956216_MIS4200.Controllers
 {
     public class customersController : Controller
     {

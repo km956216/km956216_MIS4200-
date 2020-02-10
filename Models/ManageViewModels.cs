@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace km956216_MIS4200_.Models
+namespace km956216_MIS4200.Models
 {
     public class IndexViewModel
     {

@@ -1,4 +1,4 @@
-﻿@model km956216_MIS4200.Models.Orders
+﻿@model km956216_MIS4200.Models.Pets
 
 @{
     ViewBag.Title = "Details";
@@ -7,15 +7,15 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Orders</h4>
+    <h4>Pets</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.customer.firstName)
+            @Html.DisplayNameFor(model => model.petName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.customer.firstName)
+            @Html.DisplayFor(model => model.petName)
         </dd>
 
         <dt>
@@ -27,16 +27,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.orderDate)
+            @Html.DisplayNameFor(model => model.vetId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.orderDate)
+            @Html.DisplayFor(model => model.vetId)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.orderNum }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.petsID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
