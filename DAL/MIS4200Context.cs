@@ -19,6 +19,8 @@ namespace km956216_MIS4200.DAL
 
         public System.Data.Entity.DbSet<km956216_MIS4200.Models.Pets> Pets { get; set; }
 
+        public System.Data.Entity.DbSet<km956216_MIS4200_.Models.appointmentDetails> appointmentDetails { get; set; }
+
         // public DbSet<Product> Products { get; set; }
         //public DbSet<OrderDetail> OrderDetails { get; set; }
 

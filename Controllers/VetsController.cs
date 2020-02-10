@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using km956216_MIS4200.DAL;
 using km956216_MIS4200.Models;
 
-namespace km956216_MIS4200.Controllers
+namespace km956216_MIS4200_.Controllers
 {
     public class VetsController : Controller
     {
@@ -47,7 +47,7 @@ namespace km956216_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "vetsID,vetFirstName,vetLastName,patients")] Vets vets)
+        public ActionResult Create([Bind(Include = "vetsID,vetFirstName,vetLastName,age,patients")] Vets vets)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace km956216_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "vetsID,vetFirstName,vetLastName,patients")] Vets vets)
+        public ActionResult Edit([Bind(Include = "vetsID,vetFirstName,vetLastName,age,patients")] Vets vets)
         {
             if (ModelState.IsValid)
             {
