@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using km956216_MIS4200.DAL;
 using km956216_MIS4200.Models;
 
-namespace km956216_MIS4200.Controllers
+namespace km956216_MIS4200_.Controllers
 {
     public class PetsController : Controller
     {
@@ -18,7 +18,8 @@ namespace km956216_MIS4200.Controllers
         // GET: Pets
         public ActionResult Index()
         {
-            return View(db.Pets.ToList());
+            var pets = db.Pets.Include(p => p.vets);
+            return View(pets.ToList());
         }
 
         // GET: Pets/Details/5
@@ -39,6 +40,7 @@ namespace km956216_MIS4200.Controllers
         // GET: Pets/Create
         public ActionResult Create()
         {
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetFirstName");
             return View();
         }
 
@@ -47,7 +49,7 @@ namespace km956216_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "petsID,petName,description,vetId")] Pets pets)
+        public ActionResult Create([Bind(Include = "petsID,petName,description,vetsID")] Pets pets)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +58,7 @@ namespace km956216_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetFirstName", pets.vetsID);
             return View(pets);
         }
 
@@ -71,6 +74,7 @@ namespace km956216_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetFirstName", pets.vetsID);
             return View(pets);
         }
 
@@ -79,7 +83,7 @@ namespace km956216_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "petsID,petName,description,vetId")] Pets pets)
+        public ActionResult Edit([Bind(Include = "petsID,petName,description,vetsID")] Pets pets)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +91,7 @@ namespace km956216_MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetFirstName", pets.vetsID);
             return View(pets);
         }
 
