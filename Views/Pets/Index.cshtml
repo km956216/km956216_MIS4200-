@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<km956216_MIS4200.Models.Pets>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Pet Index";
 }
 
-<h2>Index</h2>
+<h2>Pet Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.vets.vetFirstName)
+            @Html.DisplayNameFor(model => model.vets.FullName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.petName)
@@ -29,7 +29,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.vets.vetFirstName)
+            @Html.DisplayFor(modelItem => item.vets.FullName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.petName)
