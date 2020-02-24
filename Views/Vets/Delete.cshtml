@@ -35,13 +35,7 @@
             @Html.DisplayFor(model => model.age)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.patients)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.patients)
-        </dd>
+        
 
     </dl>
 
@@ -49,7 +43,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
