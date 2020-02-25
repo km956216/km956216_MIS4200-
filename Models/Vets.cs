@@ -28,7 +28,7 @@ namespace km956216_MIS4200.Models
         //public ICollection<appointmentDetails> appointmentDetails { get; set; }
         public string FullName
         {
-            get { return vetLastName + vetFirstName;  }
+            get { return vetLastName + ", "+ vetFirstName;  }
 
 
         }
