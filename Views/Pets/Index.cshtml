@@ -4,7 +4,7 @@
     ViewBag.Title = "Pet Index";
 }
 
-<h2>Pet Index</h2>
+<h2>Pet Index  <span class="glyphicon glyphicon-heart"></span> </h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -27,25 +27,27 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.vets.FullName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.petName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.age)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.petsID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.petsID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.petsID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.vets.FullName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.petName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.age)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.petsID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.petsID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.petsID })
+        
+    </td>
+    
+</tr>
 }
-
+<div class="well well-lg">Created by Ken McKinley</div>
 </table>

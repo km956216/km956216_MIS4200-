@@ -4,7 +4,7 @@
     ViewBag.Title = "Vet Index";
 }
 
-<h2>Vet Index</h2>
+<h2>Vet Index <span class="glyphicon glyphicon-star"></span></h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -21,31 +21,31 @@
             @Html.DisplayNameFor(model => model.age)
         </th>
         <th>
-            
+
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.vetFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.vetLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.age)
-        </td>
-        <td>
-           
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.vetsID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.vetsID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.vetsID })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.vetFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vetLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.vetsID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.vetsID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.vetsID })
+            </td>
+        </tr>
+    }
+   <div class="well well-lg">Created by Ken McKinley</div>
 </table>
