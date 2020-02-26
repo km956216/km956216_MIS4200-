@@ -19,10 +19,21 @@
     <div class="col-md-4">
         <h2>This Website</h2>
         <p>This website was made within Visual Studios using GitHub. It was coded in C# and is for my MIS4200 class.</p>
-        <p>@Html.ActionLink("Customers", "Index", "Customers")</p>
-        <p>@Html.ActionLink("Orders", "Index", "Orders")</p>
-        <p>@Html.ActionLink("Pets", "Index", "Pets")</p>
-        <p>@Html.ActionLink("Vets", "Index", "Vets")</p>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Links
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <p>@Html.ActionLink("Customers", "Index", "Customers")</p>
+                <p>@Html.ActionLink("Orders", "Index", "Orders")</p>
+                <p>@Html.ActionLink("Pets", "Index", "Pets")</p>
+                <p>@Html.ActionLink("Vets", "Index", "Vets")</p>
+            </ul>
+        </div>
+
+
+        
 
     </div>
     <div class="col-md-4">
